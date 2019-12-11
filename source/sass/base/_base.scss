@@ -1,0 +1,225 @@
+// ტეგები
+body{
+	color: $cbase;
+	font-size: 12px;
+	font-family: $ffbase, sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: rgba(#000, 0);
+}
+a{
+	color: $ccorp;
+	text-decoration: none;
+	outline: none;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	&:hover,
+	&:focus{
+		text-decoration: none;
+	}
+	&:hover{
+		color: $cbase;
+	}
+	&:focus{
+		color: $ccorp;
+	}
+}
+// ტეგები
+// ფორმები
+label{
+	font-family: $ffbase;
+}
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea{
+	color: $cbase;
+	font-family: $ffbase;
+	background-color: $clight;
+}
+button.gilaki{
+	color: $cwhite;
+	font-family: $ffbase;
+	background-color: $ccorp;
+
+	&:hover{
+		background-color: $cbase;
+	}
+}
+::placeholder{
+	color: $cread;
+	font-family: $ffbase;
+}
+div.artform_wrap{
+	background-color: $clight;
+	&.artradio{
+		transition: all 0.4s ease;
+		&:before{
+			background-color: $cwhite;
+		}
+		&.checked{
+			background-color: $ccorp;
+		}
+		&.disabled{
+			background-color: $cwhite;
+			border: 1px solid $clight;
+			&.checked{
+				&:before{
+					background-color: $clight;
+				}
+			}
+		}
+	}
+	&.artchecker{
+		transition: all 0.4s ease;
+		&:before,
+		&:after{
+			background-color: $cwhite;
+		}
+		&.checked{
+			background-color: $ccorp;
+		}
+		&.disabled{
+			background-color: $cwhite;
+			border: 1px solid $clight;
+			&.checked{
+				&:before,
+				&:after{
+					background-color: $clight;
+				}
+			}
+		}
+	}
+}
+span.select2{
+	span.selection{
+		span.select2-selection{
+			background-color: $clight;
+			span.select2-selection__rendered{
+				color: $cbase;
+				span.select2-selection__placeholder{
+					color: $cbase;
+				}
+				span.select2-selection__clear{
+					color: $cbase;
+				}
+			}
+			span.select2-selection__arrow{
+				&:before,
+				&:after{
+					background-color: $cbase;
+				}
+			}
+		}
+	}
+}
+span.select2-container{
+	width: 100% !important;
+	span.select2-dropdown{
+		background-color: $clight;
+		span.select2-results{
+			ul{
+				li{
+					&.select2-results__option--highlighted{
+						background-color: $cbase;
+					}
+				}
+			}
+		}
+	}
+}
+div.file_uploader{
+	label{
+		color: $cbase;
+		background-color: $clight;
+		span{
+			color: $cread;
+		}
+		strong{
+			color: $cwhite;
+			background-color: $ccorp;
+		}
+	}
+}
+// ფორმები
+// მთავარი მენიუ
+nav.navigation{
+	> ul{
+		> li{
+			> a{
+				color: $ccorp;
+			}
+			&.active,
+			&:hover{
+				> a{
+					color: $cbase;
+				}
+			}
+			ul{
+				li{
+					a{
+						color: $cread;
+					}
+					&.active,
+					&:hover{
+						> a{
+							color: $ccorp;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// მთავარი მენიუ
+// კონტენტის ანიმაცია
+div.content{
+	@extend .trans-all-4;
+}
+// კონტენტის ანიმაცია
+// რუკა
+div.map{
+	width: 100%;
+	height: 300px;
+}
+// რუკა
+// SVG Stroke ანიმაციისთვის
+svg.dashed{
+	fill: none;
+	path{
+		transition: all 0.4s ease;
+	}
+	&:hover{
+		path{
+			stroke-dashoffset: 0 !important;
+		}
+	}
+}
+// SVG Stroke ანიმაციისთვის
+// კონტაქტის ვალიდაცია
+div.big_error{
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	color: $cwhite;
+	font-size: 10px;
+	background-color: $cdanger;
+	border-radius: 5px;
+}
+// კონტაქტის ვალიდაცია

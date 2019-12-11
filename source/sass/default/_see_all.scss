@@ -1,0 +1,17 @@
+div.see_all{
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+	a{
+		@extend .flex;
+		height: 35px;
+		padding: 0 20px;
+		color: $cwhite;
+		font-family: $ffmain;
+		background-color: $ccorp;
+		border-radius: 30px;
+		&:hover{
+			background-color: $cmain;
+		}
+	}
+}

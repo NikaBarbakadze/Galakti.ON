@@ -1,0 +1,32 @@
+div.calendar_widget{
+	table{
+		width: 100%;
+		text-align: center;
+		tr{
+			th{
+				padding-bottom: 10px;
+				text-align: center;
+				color: $cbase;
+				font-weight: normal;
+				a{
+					display: block;
+					padding: 5px;
+				}
+			}
+			td{
+				width: 14%;
+				padding: 5px;
+				a{
+					display: block;
+					color: $clight;
+					background-color: $ccorp;
+					border-radius: 2px;
+					&:hover{
+						color: $cbase;
+						background-color: $clight;
+					}
+				}
+			}
+		}
+	}
+}

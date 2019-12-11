@@ -1,0 +1,24 @@
+!.gitignore
+
+.DS_Store
+node_modules/
+
+Thumbs.db
+*_notes/
+includes/cache/*
+!includes/cache/currency
+!includes/cache/weather
+
+# res/docs/online_form/*
+# res/audios/*
+# res/videos/*
+# res/misc/*
+# res/images/banners/*
+# res/images/menu/*
+# res/images/photo_gallery/*
+# res/images/useful_links/*
+# res/images/images/*
+# res/images/online_form/*
+# res/images/slider/*
+# res/images/videos/*
+# res/images/captha/*

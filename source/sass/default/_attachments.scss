@@ -1,0 +1,30 @@
+div.attachments{
+	h3{
+		margin-bottom: 10px;
+		color: $ccorp;
+		font-size: 16px;
+		font-family: $ffmain;
+		font-weight: 700;
+	}
+	ul{
+		@extend .no-list;
+		margin-bottom: 30px;
+		li{
+			display: flex;
+			padding: 15px 5px;
+			border-bottom: 1px solid $cline;
+			em{
+				margin-right: 10px;
+				color: $ccorp;
+				font-size: 15px;
+			}
+			a{
+				flex: 1;
+				color: $cmain;
+				&:hover{
+					color: $ccorp;
+				}
+			}
+		}
+	}
+}
