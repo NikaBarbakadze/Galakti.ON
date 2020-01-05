@@ -3,10 +3,12 @@ import 'slick-carousel';
 import 'magnific-popup';
 
 import './libs/hamburger_menu.js';
+import './libs/particles.js';
 import './libs/tree_menu.js';
 import './libs/artmedia_functions.js';
 import './libs/additional_functions.js';
 import './libs/plugin_parameters.js';
+import './libs/particles_param.js';
 
 import $ from 'jquery';
 window.jQuery = $;
@@ -15,3 +17,4 @@ window.$ = $;
 $(document).ready(function() {
 	// ...
 });
+

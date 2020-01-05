@@ -9,19 +9,38 @@ $(document).ready(function(){
 		}); 
 	});
 	// სლაიდერი
-	$(".main_slider").slick({
+	$(".first_slider").slick({
 		autoplay: true,
-		dots: false,
-		arrows: true,
+		dots: true,
+        customPaging : function(slider, i) {
+            var title = $(slider.$slides[i]).find('[data-title]').data('title');
+            return '<a class="pager__item"> '+title+' </a>';},
 		infinite: true,
 		speed: 1000,
+		arrows: true,
 		slidesToShow: 1,
 		fade: true,
 		adaptiveHeight: true,
-		prevArrow: '<em class="fas fa-angle-left"></em>',
-		nextArrow: '<em class="fas fa-angle-right"></em>'
+		prevArrow: '<em class="fas fa-arrow-left"></em>',
+		nextArrow: '<em class="fas fa-arrow-right"></em>'
 	});
-	// გალერეა
+
+	$(".second_slider").slick({
+		autoplay: false,
+		dots: true,
+        customPaging : function(slider, i) {
+            var title = $(slider.$slides[i]).find('[data-title]').data('title');
+            return '<a class="pager__item"> '+title+' </a>';},
+		infinite: true,
+		speed: 500,
+		arrows: false,
+		slidesToShow: 1,
+		fade: true,
+		adaptiveHeight: true,
+		prevArrow: '<em class="fas fa-arrow-left"></em>',
+		nextArrow: '<em class="fas fa-arrow-right"></em>'
+	});
+      	// გალერეა
 	$(".magnific").each(function(){
 		$(this).magnificPopup({
 			delegate: "a",

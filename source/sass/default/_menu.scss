@@ -18,7 +18,7 @@ nav.navigation{
 			&.active,
 			&:hover{
 				> a{
-					color: $ccorp;
+					color: #1a1a1d;
 				}
 			}
 			ul{
@@ -46,8 +46,8 @@ nav.navigation{
 						}
 					}
 					ul{
-						left: 100%;
 						top: 0;
+						left: 100%;		
 					}
 					&:hover{
 						> ul{
@@ -62,6 +62,21 @@ nav.navigation{
 					visibility: visible;
 					opacity: 1;
 				}
+			}
+		    &:hover::before,
+		    &.active:before{
+			    width: 100%;
+		    }
+		    &::before{
+			    display: block;
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 1.5px;
+                left: 0;
+                bottom: 0;
+                background-color: $cbase;
+                transition: all .4s cubic-bezier(.7,0,.3,1);
 			}
 		}
 	}

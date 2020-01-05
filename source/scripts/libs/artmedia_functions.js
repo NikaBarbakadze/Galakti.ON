@@ -79,3 +79,16 @@ $(document).ready(function(){
 		});
 	});
 });
+
+// Preloader
+$(document).ready(function() {
+    preloaderFadeOutTime = 2500;
+    preloaderFadeOutTime1 = 2500;
+    function hidePreloader() {
+        var preloader = $('.loader_wrapper');
+        var preloader1 = $('.sk-cube-grid');
+        preloader1.fadeOut(preloaderFadeOutTime1);
+        preloader.fadeOut(preloaderFadeOutTime);
+    }
+    hidePreloader();
+});

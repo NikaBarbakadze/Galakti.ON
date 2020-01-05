@@ -1,0 +1,96 @@
+footer{
+	padding: 30px 0;
+	div.footer_container{
+        max-width: 1920px;
+		display: flex;
+        justify-content: space-between;
+        @media(max-width: 600px){
+            flex-direction: column-reverse;
+        }
+        div.bottom_left{
+        	display: flex;
+            flex-direction: column;
+            margin: 0 0 0 50px;
+            @media(max-width: 600px){
+                margin: 20px auto;
+            }
+            div.footer_logo{
+            	width: 200px;
+            	margin: 0 0 90px 0;
+                @media(max-width: 600px){
+                    margin: 10px auto;
+                }
+            }
+            div.footer_info{
+            	p{
+            		font-family: $ffmain;
+            		font-size: 14px;
+            		color: $cbase;
+            		text-transform: capitalize;
+            	}
+            }
+        }
+        div.bottom_right{
+        	margin: 0 50px 0 0;
+            @media(max-width: 600px){
+                display: flex;
+            }
+            @media(max-width: 550px){
+                flex-direction: column;
+            }
+        	div.sign_mail{
+        		margin: 0 0 90px 0;
+        	    display: flex;
+        	    flex-direction: row;
+                @media(max-width: 600px){
+                    margin: 10px auto;
+                    justify-content: center;
+                }
+        		:nth-child(2){
+        			padding-left: 8px;
+        		}
+        		a{
+        			display: flex;
+        			p{
+        				margin: auto 0;
+        				font-size: 14px;
+        				color: #1a1a1d;
+		                &:hover::before,
+		                &.active:before{
+			                width: 100%;
+		                }
+		                &::before{
+			                display: block;
+                            position: absolute;
+                            content: "";
+                            width: 0;
+                            height: 1px;
+                            left: 0;
+                            bottom: 0;
+                            background-color: $cbase;
+                            transition: all .4s cubic-bezier(.7,0,.3,1);
+			            }        				
+        			}
+        			img{
+        				width: 18px;
+        			}
+        		}
+        	}
+            div.social_icons{
+            	display: flex; 
+                justify-content: end;
+                @media(max-width: 550px){
+                    margin-top: 10px;
+                    justify-content: center;
+                }
+                a{
+                	display: flex;
+                	margin-left: 40px;
+                	img{
+                		width: 18px;
+                	}
+                }
+            }
+        }
+	}
+}
